@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Mulish', sans-serif;
+}
+
+#root{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #D0CAB2;
+}
+
+.section{
+  background-color: #96C7C1;
+  height: 30rem;
+  width: 20rem;
+  border-radius: 3rem;
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.22);
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.select-city #select{
+  padding: 10px;
+  text-align: center;
+  border-radius: 1rem;
+  font-size: 1rem;
+  background: white;
+  outline: none;
+  border: none;
+}
+.weather-info{
+  margin: 1rem 0;
+}
+.card-info .card-img{
+  background-color: #D0CAB2;
+  border-radius: 1rem;
+}
+
+.card-info .card-description{
+  margin: 1rem 0rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: .5rem;
+}
