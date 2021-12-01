@@ -32,8 +32,10 @@ npm start
 
 # 👁️ That is Weather App
 
+![weather-app-desktop](https://user-images.githubusercontent.com/62603509/144288778-c4ed8cad-5033-4065-8d7a-b8a8fdfa18dd.png)
 
 # 👁️ That is Weather App for Mobile
 
+![weather-app-mobile](https://user-images.githubusercontent.com/62603509/144288800-d018d1c9-d2cb-4b03-8c81-a2855a96067e.png)
 
 
