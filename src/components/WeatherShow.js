@@ -1,43 +1,27 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react/cjs/react.development'
 import { CityContext, useContext} from '../context/SelectCity';
 
-
-
-
 function WeatherShow() {
-    const [cityWeatherInfo, setCityWeatherInfo] = useState("")
-
-    const API    = "https://api.openweathermap.org/data/2.5/weather?q="
-    const APP_ID = "e3ea724098e3627f60157b0239a1d5fb"
-
-    const {city} = useContext(CityContext)
-
-    console.log(city);
-    useEffect(() => {
-        console.log("useeffect", city);
-        axios(`${API}${city}&lang=tr&appid=${APP_ID}`)
-        .then((data) => {
-            setCityWeatherInfo(data.data.weather[0])
-        })
-    }, [city])
-
+    const { cityWeatherInfoCurrent } = useContext(CityContext)
     return (
         <div className="weather-info">
-            <div className="card-info">
+            {
+                cityWeatherInfoCurrent &&
+                <div className="card-info">
                 <div className="card-img">
-                    <img src={`http://openweathermap.org/img/wn/${cityWeatherInfo.icon}@4x.png`}/>
+                    <img src={`http://openweathermap.org/img/wn/${cityWeatherInfoCurrent.weather[0].icon}@4x.png`}/>
                 </div>
-                <div className="card-description">
-                    <h3>
+                <div className="boxs">
+                    <div className="card-box" id="celcius">
+                        {Math.ceil(cityWeatherInfoCurrent.temp)} °C
+                    </div>
+                    <div className="card-box card-box-2">
                         {
-                            cityWeatherInfo.description
+                            cityWeatherInfoCurrent.weather[0].description
                         }
-                    </h3> 
+                    </div>
                 </div>
             </div>
-        
-            
+            }
         </div>
     )
 }

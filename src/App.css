@@ -7,6 +7,7 @@
 }
 body{
   font-family: 'Mulish', sans-serif;
+  background-color: #D0CAB2;
 }
 
 #root{
@@ -14,14 +15,19 @@ body{
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #D0CAB2;
+}
+
+.sections{
+  height: 26rem;
+  width: 67rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .section{
   background-color: #96C7C1;
-  height: 30rem;
-  width: 20rem;
-  border-radius: 3rem;
+  width: 33%;
+  border-radius: 2rem;
   box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.22);
   text-align: center;
   padding: 3rem 2rem;
@@ -49,4 +55,93 @@ body{
   background-color: #fff;
   border-radius: 1rem;
   padding: .5rem;
+}
+
+.card-info .boxs{
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+.card-info .boxs .card-box{
+  width: 25%;
+  height: 3rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-info .boxs .card-box-2{
+  width: 70%;
+}
+
+.section-days{
+  background-color: #96C7C1;
+  width: 65%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.22);
+}
+.section-days .day{
+  background-color: #D0CAB2;
+  width: 10rem;
+  height: 12rem;
+  margin: 5px;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.section-days .day .card-img{
+  text-align: center;
+  width: 100%;
+}
+.section-days .day img{
+  height: 5rem;
+}
+.section-days .day .boxs{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.section-days .day .boxs .card-box{
+  width: 90%;
+  height: 2rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4px auto;
+  font-size: 12px;
+}
+
+@media (max-width:568px) {
+  #root{
+      align-items: unset;
+  }
+
+  .sections{
+    flex-wrap: wrap;
+    margin: 1rem 1.5rem;
+  }
+  
+  .section{
+    width: 100%;
+  }
+
+  .section-days{
+    width: 100%;
+    margin-top:1rem
+  }
+
+  .section-days .day{
+    width: 9rem;
+  }
 }
