@@ -12,7 +12,7 @@ function SectionDays() {
                         return(
                         <div className="day">
                             <div className="card-img">
-                                <img src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@4x.png`}/>
+                                <img src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@4x.png`} alt={item.weather[0].icon}/>
                             </div>
                             <div className="boxs">
                                 <div className="card-box" id="celcius">

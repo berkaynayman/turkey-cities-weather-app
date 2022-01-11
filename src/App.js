@@ -20,7 +20,7 @@ function App() {
   },[])
 
   useEffect(() =>{
-    cityList.map((item) => {
+    cityList.forEach((item) => {
       if(item.name === city){
         setLatlon({
           ...latlon,
